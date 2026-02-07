@@ -1,0 +1,190 @@
+{
+  "DSA": {
+    "easy": [
+      {
+        "title": "Two Sum",
+        "description": "Given an array of integers 'nums' and an integer 'target', return indices of the two numbers such that they add up to target.\n\nYou may assume that each input would have exactly one solution, and you may not use the same element twice.\n\nExample:\nInput: nums = [2, 7, 11, 15], target = 9\nOutput: [0, 1]\nExplanation: Because nums[0] + nums[1] == 9, we return [0, 1].",
+        "hints": [
+          "Think about what complement you need for each number",
+          "A hash map can help you look up values in O(1) time",
+          "For each number, check if (target - number) exists in your hash map"
+        ],
+        "follow_ups": [
+          "What's the time complexity of your solution?",
+          "Can you solve it in one pass?",
+          "What if there could be multiple valid pairs?"
+        ]
+      },
+      {
+        "title": "Valid Parentheses",
+        "description": "Given a string containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.\n\nAn input string is valid if:\n1. Open brackets must be closed by the same type of brackets.\n2. Open brackets must be closed in the correct order.\n\nExample 1: Input: \"()\" → Output: true\nExample 2: Input: \"()[]{}\" → Output: true\nExample 3: Input: \"(]\" → Output: false",
+        "hints": [
+          "Think about what data structure helps with matching pairs in order",
+          "A stack is perfect for this - push opening brackets, pop for closing",
+          "When you see a closing bracket, the top of stack should be its matching opening bracket"
+        ],
+        "follow_ups": [
+          "What's the space complexity?",
+          "What if we only had one type of bracket?",
+          "How would you handle an empty string?"
+        ]
+      },
+      {
+        "title": "Reverse Linked List",
+        "description": "Given the head of a singly linked list, reverse the list and return the reversed list.\n\nExample:\nInput: 1 -> 2 -> 3 -> 4 -> 5\nOutput: 5 -> 4 -> 3 -> 2 -> 1",
+        "hints": [
+          "Think about using multiple pointers",
+          "You need to keep track of previous, current, and next nodes",
+          "At each step, point current.next to previous, then move all pointers forward"
+        ],
+        "follow_ups": [
+          "Can you do it iteratively?",
+          "How about recursively?",
+          "What is the space complexity of each approach?"
+        ]
+      }
+    ],
+    "medium": [
+      {
+        "title": "Longest Substring Without Repeating Characters",
+        "description": "Given a string s, find the length of the longest substring without repeating characters.\n\nExample 1:\nInput: s = \"abcabcbb\"\nOutput: 3\nExplanation: The answer is \"abc\", with the length of 3.\n\nExample 2:\nInput: s = \"bbbbb\"\nOutput: 1\nExplanation: The answer is \"b\", with the length of 1.",
+        "hints": [
+          "Think about using a sliding window approach",
+          "Use a set or hash map to track characters in current window",
+          "When you find a duplicate, shrink the window from the left"
+        ],
+        "follow_ups": [
+          "What's the time complexity?",
+          "Could you optimize the space usage?",
+          "What if the strings contains unicode characters?"
+        ]
+      },
+      {
+        "title": "3Sum",
+        "description": "Given an integer array nums, return all the triplets [nums[i], nums[j], nums[k]] such that i != j, i != k, and j != k, and nums[i] + nums[j] + nums[k] == 0.\n\nNotice that the solution set must not contain duplicate triplets.\n\nExample:\nInput: nums = [-1, 0, 1, 2, -1, -4]\nOutput: [[-1, -1, 2], [-1, 0, 1]]",
+        "hints": [
+          "First sort the array - this helps avoid duplicates and enables two-pointer",
+          "Fix one element and use two pointers for the remaining two",
+          "Skip duplicate values to avoid duplicate triplets"
+        ],
+        "follow_ups": [
+          "Why do we sort the array first?",
+          "How do you handle duplicate triplets?",
+          "What's the time complexity?"
+        ]
+      },
+      {
+        "title": "Container With Most Water",
+        "description": "You are given an integer array 'height' of length n. Find two lines that together with the x-axis form a container that holds the most water.\n\nReturn the maximum amount of water a container can store.\n\nExample:\nInput: height = [1,8,6,2,5,4,8,3,7]\nOutput: 49\nExplanation: The max area is between index 1 (height 8) and index 8 (height 7).",
+        "hints": [
+          "Think about what determines the area: width and the shorter height",
+          "Two pointers starting from both ends could be useful",
+          "Always move the pointer pointing to the shorter line - why?"
+        ],
+        "follow_ups": [
+          "Why do we move the shorter pointer?",
+          "Can we prove this greedy approach is optimal?",
+          "What's the time and space complexity?"
+        ]
+      },
+      {
+        "title": "Binary Tree Level Order Traversal",
+        "description": "Given the root of a binary tree, return the level order traversal of its nodes' values (i.e., from left to right, level by level).\n\nExample:\nInput: root = [3,9,20,null,null,15,7]\nOutput: [[3],[9,20],[15,7]]",
+        "hints": [
+          "Think about which data structure is good for level-by-level processing",
+          "A queue (BFS) is perfect for this",
+          "Process all nodes at current level before moving to the next"
+        ],
+        "follow_ups": [
+          "Can you also solve it using DFS?",
+          "How would you do a zigzag level order traversal?",
+          "What about bottom-up level order?"
+        ]
+      }
+    ],
+    "hard": [
+      {
+        "title": "Merge K Sorted Lists",
+        "description": "You are given an array of k linked-lists, each linked-list is sorted in ascending order. Merge all the linked-lists into one sorted linked-list and return it.\n\nExample:\nInput: lists = [[1,4,5],[1,3,4],[2,6]]\nOutput: [1,1,2,3,4,4,5,6]",
+        "hints": [
+          "Think about how you would merge two sorted lists efficiently",
+          "A min-heap can help you efficiently find the smallest element",
+          "Alternatively, use divide and conquer like merge sort"
+        ],
+        "follow_ups": [
+          "What's the time complexity of your solution?",
+          "Compare heap approach vs divide-and-conquer",
+          "How much space does your solution use?"
+        ]
+      }
+    ]
+  },
+  "System Design": {
+    "medium": [
+      {
+        "title": "Design a URL Shortener",
+        "description": "Design a URL shortening service like TinyURL.\n\nRequirements:\n- Given a long URL, generate a short unique alias\n- When user accesses short URL, redirect to original\n- Handle high read traffic\n- URLs should expire after a configurable time\n\nWhat components would you need? How would you handle the ID generation?",
+        "hints": [
+          "Think about how to generate unique short IDs",
+          "Consider using base62 encoding for short URLs",
+          "Think about caching for frequently accessed URLs"
+        ],
+        "follow_ups": [
+          "How would you handle URL collisions?",
+          "How would you scale this to millions of URLs?",
+          "What database would you choose and why?"
+        ]
+      },
+      {
+        "title": "Design a Rate Limiter",
+        "description": "Design a rate limiting middleware that restricts the number of requests a client can make within a time window.\n\nRequirements:\n- Support different rate limits per user/IP\n- Handle distributed systems (multiple servers)\n- Be accurate and efficient\n\nHow would you implement this?",
+        "hints": [
+          "Consider different algorithms: token bucket, sliding window, fixed window",
+          "Think about where to store the rate limit counters",
+          "Redis might be useful for distributed rate limiting"
+        ],
+        "follow_ups": [
+          "Compare token bucket vs sliding window approach",
+          "How would you handle clock synchronization issues?",
+          "How would you make this fault-tolerant?"
+        ]
+      }
+    ]
+  },
+  "DBMS": {
+    "medium": [
+      {
+        "title": "Database Indexing",
+        "description": "Explain what database indexes are and when you would use them.\n\nConsider:\n- What data structures are commonly used for indexes?\n- What are the trade-offs of adding indexes?\n- When would you choose a B-tree vs a hash index?",
+        "hints": [
+          "Think about how indexes speed up lookups",
+          "Consider the write performance impact",
+          "Different index types are optimized for different query patterns"
+        ],
+        "follow_ups": [
+          "What is a covering index?",
+          "When might indexes hurt performance?",
+          "How do composite indexes work?"
+        ]
+      }
+    ]
+  },
+  "Operating Systems": {
+    "medium": [
+      {
+        "title": "Process vs Thread",
+        "description": "Explain the difference between a process and a thread.\n\nConsider:\n- Memory sharing\n- Context switching overhead\n- When would you use one over the other?",
+        "hints": [
+          "Processes have isolated memory spaces",
+          "Threads share memory within a process",
+          "Context switching between processes is more expensive"
+        ],
+        "follow_ups": [
+          "What is a thread-safe operation?",
+          "Explain deadlock and how to prevent it",
+          "What is the difference between user-level and kernel-level threads?"
+        ]
+      }
+    ]
+  }
+}

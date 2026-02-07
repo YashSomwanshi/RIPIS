@@ -1,0 +1,9 @@
+# RIPIS Dependencies
+PyQt6>=6.5.0
+QScintilla>=2.14.0
+vosk>=0.3.45
+sounddevice>=0.4.6
+numpy>=1.24.0
+requests>=2.31.0
+pydub>=0.25.1
+ollama>=0.1.0
